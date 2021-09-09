@@ -11,7 +11,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Header",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -24,19 +26,16 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-}
-
-header > div.container {
-  display: flex;
-  justify-content: space-between;
-}
-
-header > div.container select {
-  height: 20px;
-  align-self: flex-end;
-}
-
-header img {
-  height: 50px;
+  & > div.container {
+    display: flex;
+    justify-content: space-between;
+    img {
+      height: 50px;
+    }
+    select {
+      height: 20px;
+      align-self: flex-end;
+    }
+  }
 }
 </style>
