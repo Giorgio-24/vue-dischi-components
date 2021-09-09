@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <img src="" alt="" />
+      <img src="../assets/img/logo.png" alt="" />
       <select>
         <option value="All" selected>All</option>
         <option></option>
@@ -15,9 +15,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-/* @import "/scss/_vars.scss"; */
+@import "../assets/scss/_vars.scss";
 header {
-  /*   background-color: $dark-blue; */
+  background-color: $dark-blue;
   height: 70px;
   padding: 10px;
   position: fixed;
