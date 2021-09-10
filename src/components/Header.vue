@@ -4,7 +4,9 @@
       <img src="../assets/img/logo.png" alt="" />
       <select>
         <option value="All" selected>All</option>
-        <option></option>
+        <option v-for="(album, index) in albums" :key="index">
+          {{ album.genre }}
+        </option>
       </select>
     </div>
   </header>
@@ -13,6 +15,28 @@
 <script>
 export default {
   name: "Header",
+  props: ["albums"],
+  data() {
+    return {};
+  },
+  computed: {
+    genres() {
+      const x = [];
+      this.albums.forEach((album) => {
+        if (!x.includes(album.genre)) {
+          x.push(album.genre);
+        }
+      });
+      return x;
+    },
+    /*         getAlbumsGenre(response) {
+      response.forEach(element => {
+        if (!this.albumsGenres.includes(element.genre)) {
+          this.albumsGenres.push(element.genre);
+        };
+      });
+    }, */
+  },
 };
 </script>
 

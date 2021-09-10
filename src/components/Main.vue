@@ -13,19 +13,19 @@
 </template>
 
 <script>
-import axios from "axios";
 import Card from "./Card.vue";
 export default {
   name: "Main",
+  props: ["albums"],
   components: {
     Card,
   },
-  data() {
+  /*   data() {
     return {
       albums: {},
     };
-  },
-  created() {
+  }, */
+  /*   created() {
     axios
       .get("https://flynn.boolean.careers/exercises/api/array/music")
       .then((res) => {
@@ -34,7 +34,7 @@ export default {
       .catch((err) => {
         console.log(err);
       });
-  },
+  }, */
 };
 </script>
 
